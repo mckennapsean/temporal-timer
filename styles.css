@@ -1,0 +1,56 @@
+/* Define the main color as a variable for easy customization */
+:root {
+    --timer-color: rgba(255, 99, 71, 0.9); /* A tomato red color */
+    --tick-color: #555;
+    --label-color: #333;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    overflow: hidden; /* Prevents scrollbars */
+}
+
+.timer-container {
+    width: 90vw; /* Use viewport width */
+    max-width: 500px; /* Set a max size */
+    aspect-ratio: 1 / 1; /* Keep it a perfect square */
+}
+
+#timer-svg {
+    width: 100%;
+    height: 100%;
+}
+
+#time-wedge {
+    fill: var(--timer-color);
+}
+
+#click-target {
+    cursor: pointer;
+}
+
+/* Styles for JS-generated ticks */
+.tick-minute {
+    stroke: var(--tick-color);
+    stroke-width: 0.5;
+}
+
+.tick-five-minute {
+    stroke: var(--tick-color);
+    stroke-width: 1.5;
+}
+
+/* Styles for JS-generated labels */
+.label {
+    fill: var(--label-color);
+    font-size: 5px; /* Font size is relative to the SVG viewBox */
+    text-anchor: middle; /* Center horizontally */
+    dominant-baseline: middle; /* Center vertically */
+}

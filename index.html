@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual Timer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="timer-container">
+        <svg id="timer-svg" viewBox="0 0 100 100">
+            <g id="clock-face">
+                <circle class="face-bg" cx="50" cy="50" r="48" fill="none" stroke="#eee" stroke-width="2"></circle>
+            </g>
+
+            <path id="time-wedge" d=""></path>
+
+            <circle id="click-target" cx="50" cy="50" r="50" fill="transparent"></circle>
+        </svg>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
